@@ -1,4 +1,4 @@
-﻿namespace Messages
+﻿namespace Contracts.Messages
 {
     using System.Collections.Generic;
     using NServiceBus;

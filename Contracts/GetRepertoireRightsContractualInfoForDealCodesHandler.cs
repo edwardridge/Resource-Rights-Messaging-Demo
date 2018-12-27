@@ -2,7 +2,8 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Messages;
+    using Contracts.Messages;
+    using Contracts.Messages.Domain;
     using NServiceBus;
     using NServiceBus.Logging;
 
@@ -15,7 +16,7 @@
         {
             log.Info($"Received GetRepertoireRightsContractualInfoForDealCodes,Calculation id = {message.CalculationId}");
 
-            var info = new RepertoireRightsContractualInfoForDealCodes()
+            var info = new RepertoireRightsContractualInfoForDealCodesMessage()
             {
                 CalculationId = message.CalculationId,
                 DealInfo = new List<RepertoireRightsContractualInfo>()

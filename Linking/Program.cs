@@ -4,7 +4,9 @@ using NServiceBus;
 
 namespace Billing
 {
-    using Messages;
+    using Contracts.Messages;
+    using Linking.Messages;
+    using RepertoireRights.Messages;
 
     class Program
     {

@@ -2,7 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
-    using Messages;
+    using Contracts.Messages;
     using NServiceBus;
 
     class Program
@@ -21,7 +21,7 @@
 
             var routing = transport.Routing();
             routing.RegisterPublisher(
-                assembly: typeof(RepertoireRightsContractualInfoForDealCodes).Assembly,
+                assembly: typeof(RepertoireRightsContractualInfoForDealCodesMessage).Assembly,
                 publisherEndpoint: "Contracts");
 
             routing.RouteToEndpoint(typeof(GetRepertoireRightsContractualInfoForDealCodes), "Contracts");

@@ -9,6 +9,7 @@
     <PackageReference Include="NServiceBus.Heartbeat" Version="3.0.0" />
     <PackageReference Include="NServiceBus.Transport.Msmq" Version="1.0.0" />
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
-    <ProjectReference Include="..\Messages\Messages.csproj" />
+    <ProjectReference Include="..\Linking.Messages\Linking.Messages.csproj" />
+    <ProjectReference Include="..\RepertoireRights.Messages\RepertoireRights.Messages.csproj" />
   </ItemGroup>
 </Project>

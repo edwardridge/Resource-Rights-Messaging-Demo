@@ -1,7 +1,7 @@
 ﻿namespace Contracts
 {
     using System.Threading.Tasks;
-    using Messages;
+    using Contracts.Messages;
     using NServiceBus;
     using NServiceBus.Logging;
 

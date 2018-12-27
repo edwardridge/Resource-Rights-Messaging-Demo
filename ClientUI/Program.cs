@@ -6,7 +6,10 @@ using NServiceBus.Logging;
 namespace ClientUI
 {
     using System.Collections.Generic;
-    using Messages;
+    using Contracts.Messages;
+    using Contracts.Messages.Domain;
+    using Linking.Messages;
+    using RepertoireRights.Messages;
 
     class Program
     {

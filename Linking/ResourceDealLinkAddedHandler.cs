@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
-using Messages;
 using NServiceBus;
 
 namespace Billing
 {
     using System;
     using System.Collections.Generic;
+    using Linking.Messages;
+    using RepertoireRights.Messages;
 
     public class ResourceDealLinkAddedHandler : IHandleMessages<ResourceDealLinkAdded>
     {

@@ -1,9 +1,10 @@
-﻿namespace Messages
+﻿namespace Contracts.Messages
 {
     using System.Collections.Generic;
+    using Contracts.Messages.Domain;
     using NServiceBus;
 
-    public class RepertoireRightsContractualInfoForDealCodes : IMessage
+    public class RepertoireRightsContractualInfoForDealCodesMessage : IMessage
     {
         public string CalculationId { get; set; }
 

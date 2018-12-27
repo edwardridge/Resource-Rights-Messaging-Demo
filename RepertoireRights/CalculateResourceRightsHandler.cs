@@ -1,9 +1,9 @@
 ﻿namespace RepertoireRights
 {
     using System.Threading.Tasks;
-    using Messages;
     using NServiceBus;
     using NServiceBus.Logging;
+    using RepertoireRights.Messages;
 
     public class CalculateResourceRightsHandler : IHandleMessages<CalculateResourceRights>
     {

@@ -1,13 +1,14 @@
 ﻿namespace RepertoireRights
 {
     using System.Threading.Tasks;
-    using Messages;
+    using Contracts.Messages;
     using NServiceBus;
     using NServiceBus.Logging;
+    using RepertoireRights.Messages;
 
     public class CalculateResourceRightsFromLinkingDataPolicy : Saga<CalculateResourceRightsFromLinkingData>,
         IAmStartedByMessages<CalculateResourceRightsFromLinking>,
-        IHandleMessages<RepertoireRightsContractualInfoForDealCodes>
+        IHandleMessages<RepertoireRightsContractualInfoForDealCodesMessage>
     {
         static ILog log = LogManager.GetLogger<CalculateResourceRightsFromLinkingDataPolicy>();
 
@@ -15,7 +16,7 @@
         {
             mapper.ConfigureMapping<CalculateResourceRightsFromLinking>(message => message.CalculationId)
                 .ToSaga(sagaData => sagaData.CalculationId);
-            mapper.ConfigureMapping<RepertoireRightsContractualInfoForDealCodes>(message => message.CalculationId)
+            mapper.ConfigureMapping<RepertoireRightsContractualInfoForDealCodesMessage>(message => message.CalculationId)
                 .ToSaga(sagaData => sagaData.CalculationId);
         }
 
@@ -27,13 +28,13 @@
             context.Send(new GetRepertoireRightsContractualInfoForDealCodes()
             {
                 CalculationId = Data.CalculationId,
-                DealCodes = Data.DealCodes
+                DealCodes = message.DealCodes
             }).ConfigureAwait(false);
 
             return Task.CompletedTask;
         }
 
-        public Task Handle(RepertoireRightsContractualInfoForDealCodes message, IMessageHandlerContext context)
+        public Task Handle(RepertoireRightsContractualInfoForDealCodesMessage message, IMessageHandlerContext context)
         {
             var handle = context.SendLocal(new CalculateResourceRights()
             {

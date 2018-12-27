@@ -1,6 +1,7 @@
-﻿namespace Messages
+﻿namespace RepertoireRights.Messages
 {
     using System.Collections.Generic;
+    using Contracts.Messages.Domain;
     using NServiceBus;
 
     public class CalculateResourceRights :

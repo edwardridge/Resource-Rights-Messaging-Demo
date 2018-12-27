@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Messages;
 using NServiceBus;
 using NServiceBus.Logging;
 
@@ -7,6 +6,8 @@ namespace Billing
 {
     using System;
     using System.Collections.Generic;
+    using Contracts.Messages;
+    using RepertoireRights.Messages;
 
     public class DealUpdatedHandler :
         IHandleMessages<DealUpdated>

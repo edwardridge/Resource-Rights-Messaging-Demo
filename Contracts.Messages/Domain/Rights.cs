@@ -1,4 +1,4 @@
-﻿namespace Messages
+﻿namespace Contracts.Messages.Domain
 {
     public class Rights
     {
