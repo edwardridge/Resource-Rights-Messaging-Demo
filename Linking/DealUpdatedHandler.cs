@@ -43,6 +43,7 @@ namespace Billing
                 {
                     CalculationId = Guid.NewGuid().ToString(),
                     ISRC = $"ISRC {isrc}",
+                    Timestamp = message.Timestamp,
                     DealCodes = new List<string>() {message.DealCode, "2"}
                 }).ConfigureAwait(false);
             }

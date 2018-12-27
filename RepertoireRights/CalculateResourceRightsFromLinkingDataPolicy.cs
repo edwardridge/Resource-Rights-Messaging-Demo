@@ -24,6 +24,7 @@
         {
             log.Info("OrderPlaced message received.");
             Data.ISRC = message.ISRC;
+            Data.Timestamp = message.Timestamp;
 
             context.Send(new GetRepertoireRightsContractualInfoForDealCodes()
             {

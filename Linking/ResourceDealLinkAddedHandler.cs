@@ -15,6 +15,7 @@ namespace Billing
             return context.Send(new CalculateResourceRightsFromLinking() {
                 CalculationId = Guid.NewGuid().ToString(),
                 ISRC = message.ISRC,
+                Timestamp = message.Timestamp,
                 DealCodes = new List<string>() { message.DealCode, "2" }
             });
         }
