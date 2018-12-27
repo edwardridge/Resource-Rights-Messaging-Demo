@@ -19,24 +19,29 @@
             var info = new RepertoireRightsContractualInfoForDealCodesMessage()
             {
                 CalculationId = message.CalculationId,
-                DealInfo = new List<RepertoireRightsContractualInfo>()
+                DealInfo = GetRepertoireRightsContractualInfo()
+            };
+
+            return context.Reply(info);
+        }
+
+        static List<RepertoireRightsContractualInfo> GetRepertoireRightsContractualInfo()
+        {
+            return new List<RepertoireRightsContractualInfo>()
+            {
+                new RepertoireRightsContractualInfo()
                 {
-                    new RepertoireRightsContractualInfo()
+                    DealCode = "1",
+                    Rights = new List<Rights>()
                     {
-                        DealCode = "1",
-                        Rights = new List<Rights>()
+                        new Rights()
                         {
-                            new Rights()
-                            {
-                                Name = "Digital",
-                                RightGranted = false
-                            }
+                            Name = "Digital",
+                            RightGranted = false
                         }
                     }
                 }
             };
-
-            return context.Reply(info);
         }
     }
 }

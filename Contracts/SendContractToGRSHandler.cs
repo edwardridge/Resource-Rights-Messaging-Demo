@@ -14,12 +14,6 @@
         {
             log.Info($"Received SendContractToGRS, Deal code = {message.DealCode}");
 
-            //var orderPlaced = new OrderPlaced
-            //{
-            //    OrderId = message.OrderId
-            //};
-            //return context.Publish(orderPlaced);
-
             return Task.CompletedTask;
         }
     }
