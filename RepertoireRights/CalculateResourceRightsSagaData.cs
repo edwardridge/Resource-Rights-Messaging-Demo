@@ -3,7 +3,7 @@
     using System;
     using NServiceBus;
 
-    public class CalculateResourceRightsFromLinkingData : ContainSagaData
+    public class CalculateResourceRightsSagaData : ContainSagaData
     {
         public string CalculationId { get; set; }
 

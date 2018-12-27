@@ -12,7 +12,7 @@ namespace Billing
     {
         public Task Handle(ResourceDealLinkAdded message, IMessageHandlerContext context)
         {
-            return context.Send(new CalculateResourceRightsFromLinking() {
+            return context.Send(new StartCalculatingResourceRights() {
                 CalculationId = Guid.NewGuid().ToString(),
                 ISRC = message.ISRC,
                 Timestamp = message.Timestamp,

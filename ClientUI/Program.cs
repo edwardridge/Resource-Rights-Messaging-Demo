@@ -29,7 +29,7 @@ namespace ClientUI
             routing.RouteToEndpoint(typeof(SendContractToGRS), "Contracts");
             routing.RouteToEndpoint(typeof(UpdateDeal), "Contracts");
             routing.RouteToEndpoint(typeof(CalculateResourceRights), "RepertoireRights");
-            routing.RouteToEndpoint(typeof(CalculateResourceRightsFromLinking), "RepertoireRights");
+            routing.RouteToEndpoint(typeof(StartCalculatingResourceRights), "RepertoireRights");
             
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);
@@ -121,7 +121,7 @@ namespace ClientUI
 
         static async Task CalculateResourceRightsFromLinking(IEndpointInstance endpointInstance)
         {
-            var calculateResourceRightsFromLinking = new CalculateResourceRightsFromLinking()
+            var calculateResourceRightsFromLinking = new StartCalculatingResourceRights()
             {
                 CalculationId = Guid.NewGuid().ToString(),
                 ISRC = "ISRC 1",

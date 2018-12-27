@@ -17,7 +17,7 @@ namespace Billing
             {
                 var dealCodes = GetDealsLinkedToResource();
 
-                context.Send(new CalculateResourceRightsFromLinking()
+                context.Send(new StartCalculatingResourceRights()
                 {
                     CalculationId = Guid.NewGuid().ToString(),
                     ISRC = $"ISRC {isrc}",

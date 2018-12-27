@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using NServiceBus;
 
-    public class CalculateResourceRightsFromLinking : ICommand
+    public class StartCalculatingResourceRights : ICommand
     {
         public string CalculationId { get; set; }
 

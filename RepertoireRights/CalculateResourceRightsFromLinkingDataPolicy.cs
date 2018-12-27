@@ -6,21 +6,21 @@
     using NServiceBus.Logging;
     using RepertoireRights.Messages;
 
-    public class CalculateResourceRightsFromLinkingDataPolicy : Saga<CalculateResourceRightsFromLinkingData>,
-        IAmStartedByMessages<CalculateResourceRightsFromLinking>,
+    public class CalculateResourceRightsSaga : Saga<CalculateResourceRightsSagaData>,
+        IAmStartedByMessages<StartCalculatingResourceRights>,
         IHandleMessages<RepertoireRightsContractualInfoForDealCodesMessage>
     {
-        static ILog log = LogManager.GetLogger<CalculateResourceRightsFromLinkingDataPolicy>();
+        static ILog log = LogManager.GetLogger<CalculateResourceRightsSaga>();
 
-        protected override void ConfigureHowToFindSaga(SagaPropertyMapper<CalculateResourceRightsFromLinkingData> mapper)
+        protected override void ConfigureHowToFindSaga(SagaPropertyMapper<CalculateResourceRightsSagaData> mapper)
         {
-            mapper.ConfigureMapping<CalculateResourceRightsFromLinking>(message => message.CalculationId)
+            mapper.ConfigureMapping<StartCalculatingResourceRights>(message => message.CalculationId)
                 .ToSaga(sagaData => sagaData.CalculationId);
             mapper.ConfigureMapping<RepertoireRightsContractualInfoForDealCodesMessage>(message => message.CalculationId)
                 .ToSaga(sagaData => sagaData.CalculationId);
         }
 
-        public Task Handle(CalculateResourceRightsFromLinking message, IMessageHandlerContext context)
+        public Task Handle(StartCalculatingResourceRights message, IMessageHandlerContext context)
         {
             log.Info("OrderPlaced message received.");
             Data.ISRC = message.ISRC;
@@ -40,6 +40,7 @@
             var handle = context.SendLocal(new CalculateResourceRights()
             {
                 ISRC = Data.ISRC,
+                Timestamp = Data.Timestamp,
                 DealInfo = message.DealInfo
             }).ConfigureAwait(false);
 

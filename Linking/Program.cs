@@ -37,7 +37,7 @@ namespace Billing
                 publisherEndpoint: "SagaDemo");
 
             routing.RouteToEndpoint(typeof(SendContractToGRS), "Contracts");
-            routing.RouteToEndpoint(typeof(CalculateResourceRightsFromLinking), "RepertoireRights");
+            routing.RouteToEndpoint(typeof(StartCalculatingResourceRights), "RepertoireRights");
             
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);

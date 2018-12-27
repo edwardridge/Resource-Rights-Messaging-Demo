@@ -39,7 +39,7 @@ namespace Billing
             }
             void SendCalculateResourceRightsCommand(string isrc)
             {
-                context.Send(new CalculateResourceRightsFromLinking()
+                context.Send(new StartCalculatingResourceRights()
                 {
                     CalculationId = Guid.NewGuid().ToString(),
                     ISRC = $"ISRC {isrc}",
