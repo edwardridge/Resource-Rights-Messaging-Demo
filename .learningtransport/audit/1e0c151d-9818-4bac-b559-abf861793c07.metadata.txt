@@ -1,0 +1,21 @@
+{
+  "NServiceBus.MessageId": "e3535ae8-7fd6-4bb2-862f-a9c300ff10e4",
+  "NServiceBus.MessageIntent": "Publish",
+  "NServiceBus.RelatedTo": "ba0cb6b7-c055-4862-a325-a9c300ff10de",
+  "NServiceBus.ConversationId": "07ce897f-a53f-4669-b45b-a9c300ff10c8",
+  "NServiceBus.CorrelationId": "e3e60ad6-5e7c-4bed-90df-a9c300ff10c5",
+  "NServiceBus.OriginatingMachine": "UKHAMWD93369",
+  "NServiceBus.OriginatingEndpoint": "Billing",
+  "$.diagnostics.originating.hostid": "832e3d6a0098e51f1049d1c5b426ddb2",
+  "NServiceBus.ReplyToAddress": "Billing",
+  "NServiceBus.ContentType": "text\/xml",
+  "NServiceBus.EnclosedMessageTypes": "Messages.OrderBilled, Messages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "NServiceBus.Version": "7.1.6",
+  "NServiceBus.TimeSent": "2018-12-27 15:28:40:009487 Z",
+  "NServiceBus.ProcessingStarted": "2018-12-27 15:28:40:170961 Z",
+  "NServiceBus.ProcessingEnded": "2018-12-27 15:28:40:232396 Z",
+  "$.diagnostics.hostid": "a264565ae8153334ff6269c398b1cbe9",
+  "$.diagnostics.hostdisplayname": "UKHAMWD93369",
+  "NServiceBus.ProcessingMachine": "UKHAMWD93369",
+  "NServiceBus.ProcessingEndpoint": "Shipping"
+}

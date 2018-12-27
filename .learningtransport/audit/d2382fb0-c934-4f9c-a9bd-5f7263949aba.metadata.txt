@@ -1,0 +1,20 @@
+{
+  "NServiceBus.MessageId": "e3e60ad6-5e7c-4bed-90df-a9c300ff10c5",
+  "NServiceBus.MessageIntent": "Send",
+  "NServiceBus.ConversationId": "07ce897f-a53f-4669-b45b-a9c300ff10c8",
+  "NServiceBus.CorrelationId": "e3e60ad6-5e7c-4bed-90df-a9c300ff10c5",
+  "NServiceBus.OriginatingMachine": "UKHAMWD93369",
+  "NServiceBus.OriginatingEndpoint": "SagaDemo",
+  "$.diagnostics.originating.hostid": "ae36083112d778d1fadf1ecc7eac3b3d",
+  "NServiceBus.ReplyToAddress": "SagaDemo",
+  "NServiceBus.ContentType": "text\/xml",
+  "NServiceBus.EnclosedMessageTypes": "Messages.PlaceOrder, Messages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "NServiceBus.Version": "7.1.6",
+  "NServiceBus.TimeSent": "2018-12-27 15:28:39:948969 Z",
+  "NServiceBus.ProcessingStarted": "2018-12-27 15:28:39:988245 Z",
+  "NServiceBus.ProcessingEnded": "2018-12-27 15:28:39:989751 Z",
+  "$.diagnostics.hostid": "90d46d16dd7d1418128a621f6ec7f0f8",
+  "$.diagnostics.hostdisplayname": "UKHAMWD93369",
+  "NServiceBus.ProcessingMachine": "UKHAMWD93369",
+  "NServiceBus.ProcessingEndpoint": "Sales"
+}
