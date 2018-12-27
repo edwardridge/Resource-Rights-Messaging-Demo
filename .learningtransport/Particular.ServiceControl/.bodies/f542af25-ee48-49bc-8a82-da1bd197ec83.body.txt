@@ -1,1 +1,0 @@
-{"HostId":"832e3d6a-0098-e51f-1049-d1c5b426ddb2","Endpoint":"Billing","StartedAt":"2018-12-27T15:34:34.4894079Z","HostProperties":{"Machine":"UKHAMWD93369","ProcessID":"3908","UserName":"RidgeE","PathToExecutable":"D:\\NServiceBuse Saga Demo\\Billing\\bin\\Debug\\net461\\Billing.exe"},"HostDisplayName":"UKHAMWD93369","Host":"UKHAMWD93369"}
