@@ -12,6 +12,8 @@
 
         public Task Handle(UpdateDeal message, IMessageHandlerContext context)
         {
+            log.Info("UpdateDeal message received");
+
             return context.Publish(new DealUpdated()
             {
                 DealCode = message.DealCode

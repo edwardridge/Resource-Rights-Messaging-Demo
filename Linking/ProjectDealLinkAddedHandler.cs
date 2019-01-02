@@ -1,18 +1,22 @@
-﻿using System.Threading.Tasks;
-using NServiceBus;
-
-namespace Billing
+﻿namespace Linking
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Contracts.Messages;
     using Linking.Messages;
+    using NServiceBus;
+    using NServiceBus.Logging;
     using RepertoireRights.Messages;
 
     public class ProjectDealLinkAddedHandler : IHandleMessages<ProjectDealLinkAdded>
     {
+        static ILog log = LogManager.GetLogger<ProjectDealLinkAddedHandler>();
+
         public Task Handle(ProjectDealLinkAdded message, IMessageHandlerContext context)
         {
+            log.Info("ProjectDealLinkAdded message received");
+
             foreach (var isrc in GetIsrcsLinkedToDeal())
             {
                 var dealCodes = GetDealsLinkedToResource();

@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
-using NServiceBus;
-using NServiceBus.Logging;
-
-namespace Billing
+﻿namespace Linking
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Contracts.Messages;
+    using NServiceBus;
+    using NServiceBus.Logging;
     using RepertoireRights.Messages;
 
     public class DealUpdatedHandler :

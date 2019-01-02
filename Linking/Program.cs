@@ -1,11 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using NServiceBus;
-
-namespace Billing
+﻿namespace Linking
 {
+    using System;
+    using System.Threading.Tasks;
     using Contracts.Messages;
     using Linking.Messages;
+    using NServiceBus;
     using RepertoireRights.Messages;
 
     class Program

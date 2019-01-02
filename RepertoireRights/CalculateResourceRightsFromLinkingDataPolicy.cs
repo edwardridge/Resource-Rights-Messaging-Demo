@@ -22,7 +22,7 @@
 
         public Task Handle(StartCalculatingResourceRights message, IMessageHandlerContext context)
         {
-            log.Info("OrderPlaced message received.");
+            log.Info("StartCalculatingResourceRights message received.");
             Data.ISRC = message.ISRC;
             Data.Timestamp = message.Timestamp;
 
@@ -37,6 +37,7 @@
 
         public Task Handle(RepertoireRightsContractualInfoForDealCodesMessage message, IMessageHandlerContext context)
         {
+            log.Info("RepertoireRightsContractualInfoForDealCodesMessage message received.");
             var handle = context.SendLocal(new CalculateResourceRights()
             {
                 ISRC = Data.ISRC,
