@@ -48,7 +48,7 @@ namespace ClientUI
             while (true)
             {
                 log.Info("External Commands: 'U' to update a deal");
-                log.Info("Internal Commands: 'S' to send contract to GRS, 'C' to calculate resource rights, 'L' to Calculate Resource Rights From Linking Data");
+                //log.Info("Internal Commands: 'S' to send contract to GRS, 'C' to calculate resource rights, 'L' to Calculate Resource Rights From Linking Data");
                 log.Info("Events: 'R' for resource to deal link added, 'P' for project to deal link added");
                 log.Info("'Q' to quit");
                 var key = Console.ReadKey();
